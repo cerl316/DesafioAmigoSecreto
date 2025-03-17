@@ -36,8 +36,14 @@ function limpiar(){
 }
 
 function sortearAmigo(){
-    if (ArrayNombres!=[]){
-        let nroIndice = Math.floor(Math.random()*ArrayNombres.length+1);
+    if (ArrayNombres.length !=0){
+        let nroIndice = Math.floor(Math.random()*ArrayNombres.length);
+        console.log(nroIndice)
+        if (nroIndice!=0){
+            nroIndice--;
+            console.log("resto uno ="+nroIndice)
+        }
+   
         alert(ArrayNombres[nroIndice]);
         ArrayNombres.splice(nroIndice,1);
     }
